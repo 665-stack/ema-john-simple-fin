@@ -1,0 +1,31 @@
+/* button one */
+.clear-cart-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-cart-btn p {
+    margin-right: 4px;
+}
+
+.clear-cart-btn .icon {
+    font-size: 24px;
+}
+
+/* button two */
+.review-order-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-order-btn p {
+    margin-right: 4px;
+}
+
+.review-order-btn .icon {
+    font-size: 24px;
+}
