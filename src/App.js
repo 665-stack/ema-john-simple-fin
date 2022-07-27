@@ -1,0 +1,17 @@
+
+import './App.css';
+// import Header from './Components/Header/Header';
+// import Shop from './Components/Shop/Shop';
+
+
+function App() {
+  return (
+    <div className="App">
+      <h2>Hi! That's Shahin. :)</h2>
+      {/* <Header></Header>
+      <Shop></Shop> */}
+    </div>
+  );
+}
+
+export default App;
