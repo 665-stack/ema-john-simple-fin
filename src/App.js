@@ -1,5 +1,6 @@
 
 import './App.css';
+import Header from './Components/Header/Header';
 // import Header from './Components/Header/Header';
 // import Shop from './Components/Shop/Shop';
 
@@ -7,9 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h2>Hi! That's Shahin. :)</h2>
-      {/* <Header></Header>
-      <Shop></Shop> */}
+      <Header></Header>
     </div>
   );
 }
