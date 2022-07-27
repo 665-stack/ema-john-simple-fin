@@ -1,0 +1,91 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.product {
+    position: relative;
+    width: 300px;
+    height: 508px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+}
+
+.product img {
+    width: 286px;
+    height: 286px;
+    border-radius: 8px;
+    margin: 8px 7px 0px 7px;
+}
+
+.product-details {
+    margin: 12px 14px 13px 14px;
+}
+
+.product-name {
+    color: #0E161A;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    margin: 0;
+}
+
+.product-price {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    color: #0E161A;
+    margin: 0;
+    margin: 11px 0px 20px 0px;
+}
+
+.product-manufacturer {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.004em;
+    margin-top: 11px;
+    color: #2A414F;
+}
+
+.product-ratings {
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.004em;
+    margin-top: 11px;
+    color: #2A414F;
+}
+
+.addToCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #FFE0B3;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-top: 1px solid #95A0A7;
+    border-radius: 0px 0px 8px 8px;
+
+}
+
+.addToCart:hover {
+    background-color: rgba(255, 153, 0, 0.3);
+}
+
+.addToCart p {
+    color: #0E161A;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.0125em;
+    margin-right: 5px;
+}
