@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cart.css'
+// import './Cart.css'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,9 +16,9 @@ const Cart = ({ cart }) => {
                 <h6>Grand Total: $</h6>
             </div>
             <div className='btns'>
-                <button className='clear-cart-btn'><p>Clear Cart</p> <FontAwesomeIcon icon={faTrashCan} className='icon'></FontAwesomeIcon> </button>
+                <button className='clear-cart-btn'><p>Clear Cart  <FontAwesomeIcon icon={faTrashCan} className='icon'></FontAwesomeIcon></p> </button>
                 <br />
-                <button className='review-order-btn'><p>Review Order</p> <FontAwesomeIcon icon={faArrowRight} className="icon"></FontAwesomeIcon></button>
+                <button className='review-order-btn'><p>Review Order  <FontAwesomeIcon icon={faArrowRight} className="icon"></FontAwesomeIcon></p> </button>
             </div>
         </div >
     );
