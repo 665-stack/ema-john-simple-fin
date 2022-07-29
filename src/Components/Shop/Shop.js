@@ -6,19 +6,31 @@ import './Shop.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+
     useEffect(() => {
+        console.log('products load before fetch');
         fetch('products.json')
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => {
+                setProducts(data);
+                // console.log('products loaded');
+            });
     }, []);
+
     useEffect(() => {
+        console.log('local storage first line', products);
         const storedCart = getStoredcart();
-        // console.log(storedCart);
+        const savedCart = [];
         for (const id in storedCart) {
             const addedProduct = products.find(product => product.id === id);
-            console.log(addedProduct);
+            if (addedProduct) {
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                savedCart.push(addedProduct)
+            }
         }
-    }, []);
+        setCart(savedCart);
+    }, [products]);
 
     const handleAddToCart = product => {
         const newCart = [...cart, product];
