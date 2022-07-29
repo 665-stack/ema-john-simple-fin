@@ -9,7 +9,7 @@ const Cart = ({ cart }) => {
     let total = 0;
     let shipping = 0;
     for (const product of cart) {
-        console.log(product);
+        // console.log(product);
         total = total + product.price;
         shipping = shipping + product.shipping;
     }
