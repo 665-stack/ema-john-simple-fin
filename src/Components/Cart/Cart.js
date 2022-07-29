@@ -14,6 +14,7 @@ const Cart = ({ cart }) => {
         shipping = shipping + product.shipping;
     }
     const tax = (total * 0.1).toFixed(2);
+    const grandTotal = total + shipping + parseFloat(tax);
     return (
         <div className='cart'>
             <h5>Our Summary</h5>
@@ -22,7 +23,7 @@ const Cart = ({ cart }) => {
                 <p>Total Price: ${total}</p>
                 <p>Total Shipping Charge: ${shipping}</p>
                 <p>Tax: ${tax}</p>
-                <h6>Grand Total: $</h6>
+                <h6>Grand Total: ${grandTotal}</h6>
             </div>
             <div className='btns'>
                 <button className='clear-cart-btn'><p>Clear Cart  <FontAwesomeIcon icon={faTrashCan} className='icon'></FontAwesomeIcon></p> </button>
