@@ -12,7 +12,7 @@ const Orders = () => {
     return (
         // react e jekhon component er css shobjaygay use kore. jodi eta bondo korte cai taile module css file name use korte hove.
         <div className='shop-container'>
-            <div className='products-container'>
+            <div className='review-items-container'>
                 {
                     cart.map(product => <ReviewItem product={product} key={product.id}></ReviewItem>)
                 }
