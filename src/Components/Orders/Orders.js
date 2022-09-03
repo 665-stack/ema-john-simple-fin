@@ -1,6 +1,8 @@
 import React from 'react';
 import useCart from '../../Hooks/useCart';
 import useProducts from '../../Hooks/useProducts';
+import Cart from '../Cart/Cart'
+import ReviewItem from '../ReviewItem/ReviewItem'
 
 const Orders = () => {
     // This useProducts state from custom hook.
@@ -8,9 +10,16 @@ const Orders = () => {
     // akhane useCart custom hook ta call korar somoy parameter dite hoice. Karon custom hook make korar somoy oi jaygay akta parameter use kora hoicilo.
     const [cart, setCart] = useCart(products);
     return (
-        <div>
-            <h3>This is orders: {products.length}</h3>
-            <p>Cart has: {cart.length}</p>
+        // react e jekhon component er css shobjaygay use kore. jodi eta bondo korte cai taile module css file name use korte hove.
+        <div className='shop-container'>
+            <div className='products-container'>
+                {
+                    cart.map(product => <ReviewItem product={product} key={product.id}></ReviewItem>)
+                }
+            </div>
+            <div className='cart-container'>
+                <Cart cart={cart}></Cart>
+            </div>
         </div>
     );
 };
