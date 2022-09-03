@@ -9,12 +9,18 @@ const Orders = () => {
     const [products, setProducts] = useProducts();
     // akhane useCart custom hook ta call korar somoy parameter dite hoice. Karon custom hook make korar somoy oi jaygay akta parameter use kora hoicilo.
     const [cart, setCart] = useCart(products);
+    const handleRemoveProduct = product => {
+        const rest = cart.filter(pd => pd.id !== product.id);
+        setCart(rest);
+    }
     return (
         // react e jekhon component er css shobjaygay use kore. jodi eta bondo korte cai taile module css file name use korte hove.
         <div className='shop-container'>
             <div className='review-items-container'>
                 {
-                    cart.map(product => <ReviewItem product={product} key={product.id}></ReviewItem>)
+                    cart.map(product => <ReviewItem
+                        product={product} key={product.id}
+                        handleRemoveProduct={handleRemoveProduct}></ReviewItem>)
                 }
             </div>
             <div className='cart-container'>

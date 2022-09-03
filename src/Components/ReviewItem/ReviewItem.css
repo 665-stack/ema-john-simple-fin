@@ -21,3 +21,26 @@
 .review-item-details p {
     margin: 0;
 }
+
+.review-item .delete-container {
+    display: flex;
+    align-items: center;
+}
+
+.review-item .delete-button {
+    background-color: rgba(239, 101, 101, 0.3);
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.review-item .delete-button:hover {
+    background-color: rgba(251, 135, 135, 0.3);
+}
+
+.delete-icon {
+    color: #EB5757;
+    font-size: 27px;
+}
