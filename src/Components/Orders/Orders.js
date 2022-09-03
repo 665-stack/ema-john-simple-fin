@@ -3,6 +3,7 @@ import useCart from '../../Hooks/useCart';
 import useProducts from '../../Hooks/useProducts';
 import Cart from '../Cart/Cart'
 import ReviewItem from '../ReviewItem/ReviewItem'
+import { removeFromDb } from "../../utilities/fakedb";
 
 const Orders = () => {
     // This useProducts state from custom hook.
@@ -12,6 +13,7 @@ const Orders = () => {
     const handleRemoveProduct = product => {
         const rest = cart.filter(pd => pd.id !== product.id);
         setCart(rest);
+        removeFromDb(product.id);
     }
     return (
         // react e jekhon component er css shobjaygay use kore. jodi eta bondo korte cai taile module css file name use korte hove.
