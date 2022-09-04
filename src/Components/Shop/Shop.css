@@ -35,7 +35,6 @@
 }
 
 .order-details {
-    margin-left: 23px;
     margin-top: 50px;
     font-weight: 400;
     font-size: 17px;
@@ -46,6 +45,7 @@
 }
 
 .order-details p {
+    margin-left: 23px;
     color: #2A414F;
     margin-top: 25px;
     font-family: 'Lato', sans-serif;
@@ -53,6 +53,7 @@
 }
 
 .order-details h6 {
+    margin-left: 23px;
     font-weight: 400;
     font-size: 21px;
     margin-top: 25px;
@@ -67,15 +68,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-button p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.005em;
-    color: #FFFFFF;
-
+    padding-bottom: 30px;
 }
 
 .clear-cart-btn {
@@ -88,6 +81,13 @@ button p {
     border-radius: 4px;
     width: 225px;
     height: 48px;
+    color: #FFFFFF;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
 
 }
 
@@ -101,6 +101,13 @@ button p {
     border-radius: 4px;
     width: 225px;
     height: 48px;
+    color: #FFFFFF;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
 }
 
 .btns .icon {

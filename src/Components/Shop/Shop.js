@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useProducts from '../../Hooks/useProducts';
 import { addToDb, getStoredcart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
+//import icons
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Shop = () => {
     // This useProducts() state from custom hook
     const [products, setProducts] = useProducts();
@@ -41,6 +46,11 @@ const Shop = () => {
         setCart(newCart);
         addToDb(selectedProduct.id);
     }
+    // useNavigate from button
+    const navigate = useNavigate()
+    const reviewOrder = () => {
+        navigate('/orders')
+    }
     return (
         <div className='shop-container'>
             {/* product section */}
@@ -55,13 +65,15 @@ const Shop = () => {
             </div>
             {/* cart section */}
             <div className='cart-container'>
-                <Cart cart={cart}>
-                    <Link to='/orders'>
-                        <button>Review order </button>
-                    </Link>
+                <Cart cart={cart} className='btns-2'>
+                    <div className="btns">
+                        <button className='clear-cart-btn'>Clear Cart  <FontAwesomeIcon icon={faTrashCan} className='icon'></FontAwesomeIcon> </button>
+                        <br />
+                        <button onClick={reviewOrder} className='review-order-btn'>Review Order  <FontAwesomeIcon icon={faArrowRight} className="icon"></FontAwesomeIcon> </button>
+                    </div>
                 </Cart>
             </div>
-        </div>
+        </div >
     );
 };
 

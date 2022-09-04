@@ -4,8 +4,13 @@ import useProducts from '../../Hooks/useProducts';
 import Cart from '../Cart/Cart'
 import ReviewItem from '../ReviewItem/ReviewItem'
 import { removeFromDb } from "../../utilities/fakedb";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Orders.css'
+
+//import icons
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -20,6 +25,11 @@ const Orders = () => {
         setCart(rest);
         removeFromDb(product.id);
     }
+    // usenavigate from button
+    const navigate = useNavigate()
+    const proceedCheckout = () => {
+        navigate(`/inventory`)
+    }
     return (
         // react e jekhon component er css shobjaygay use kore. jodi eta bondo korte cai taile module css file name use korte hove.
         <div className='shop-container'>
@@ -32,9 +42,11 @@ const Orders = () => {
             </div>
             <div className='cart-container'>
                 <Cart cart={cart}>
-                    <Link to='/inventory'>
-                        <button>Procced Checkout </button>
-                    </Link>
+                    <div className='btns'>
+                        <button className='clear-cart-btn'>Clear Cart  <FontAwesomeIcon icon={faTrashCan} className='icon'></FontAwesomeIcon> </button>
+                        <br />
+                        <button onClick={proceedCheckout} className='review-order-btn'>Review Order  <FontAwesomeIcon icon={faArrowRight} className="icon"></FontAwesomeIcon> </button>
+                    </div>
                 </Cart>
             </div>
         </div>
