@@ -5,6 +5,9 @@ import Cart from '../Cart/Cart'
 import ReviewItem from '../ReviewItem/ReviewItem'
 import { removeFromDb } from "../../utilities/fakedb";
 import { Link } from 'react-router-dom';
+import './Orders.css'
+
+
 
 const Orders = () => {
     // This useProducts state from custom hook.
