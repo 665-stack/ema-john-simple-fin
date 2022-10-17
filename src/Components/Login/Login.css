@@ -1,6 +1,6 @@
 .form-container {
-    width: 350px;
-    height: 450px;
+    width: 500px;
+    height: 600px;
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -15,13 +15,16 @@
 
 .form-title {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 42px;
     letter-spacing: 0.0025em;
     color: #2A414F;
     padding-top: 25px;
     text-align: center;
 }
+
+
+/* ================================ */
 
 .form {
     margin-top: 29px;
@@ -36,28 +39,60 @@
 }
 
 .input-group input {
-    width: 252px;
-    height: 40px;
+    width: 415px;
+    height: 54px;
     margin-top: 9px;
     border: 1px solid #95A0A7;
     border-radius: 5px;
     padding: 0px 10px;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 400;
 }
 
+
+/* ================================ */
+
 .form-submit {
     background-color: rgba(255, 153, 0, 0.3);
-    width: 252px;
-    height: 40px;
+    width: 415px;
+    height: 55px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 21px;
     margin-top: 44px;
+}
+
+.form-text {
+    color: #2A414F;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-link {
     color: rgba(255, 153, 0, 1);
     text-decoration: none;
+}
+
+
+/* ================================ */
+.form-or-line {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-or-line div {
+    border-bottom: 1px solid #95A0A7;
+    height: 1px;
+    width: 30%;
+}
+
+.form-or-line span {
+    color: #2A414F;
+    font-size: 17px;
+    padding: 0 15px;
 }
