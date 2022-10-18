@@ -17,6 +17,10 @@ const SignUp = () => {
         user
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    if (user) {
+        console.log(user)
+        navigate('/')
+    }
 
     const handleEmailBlur = event => {
         setEmail(event.target.value)
@@ -28,10 +32,7 @@ const SignUp = () => {
         setConfirmPassword(event.target.value)
     }
 
-    if (user) {
-        console.log(user)
-        navigate('/')
-    }
+
 
 
     const handleCreateUser = event => {
