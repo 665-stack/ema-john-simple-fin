@@ -5,7 +5,6 @@ import './Cart.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Cart = ({ cart, children }) => {
-    console.log(children);
     let total = 0;
     let shipping = 0;
     let quantity = 0;

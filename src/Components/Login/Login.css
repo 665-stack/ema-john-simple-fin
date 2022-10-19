@@ -1,10 +1,10 @@
 .form-container {
     width: 500px;
-    height: 600px;
+    /* height: 600px; */
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 80px;
-
+    padding-bottom: 45px;
     background: #FFFFFF;
     box-sizing: border-box;
     border: 1px solid #95A0A7;
