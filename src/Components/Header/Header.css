@@ -27,3 +27,20 @@
 .header a:hover {
     color: #ff9900;
 }
+
+.signOut-btn {
+    background-color: transparent;
+    padding: 8px 15px;
+    margin: 0px 0px 0px 15px;
+    border: none;
+    border: 2px solid #ff9900;
+    border-radius: 8px;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+.signOut-btn:hover {
+    color: #ff9900;
+}
