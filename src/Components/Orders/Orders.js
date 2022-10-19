@@ -28,7 +28,7 @@ const Orders = () => {
     // usenavigate from button
     const navigate = useNavigate()
     const proceedCheckout = () => {
-        navigate(`/inventory`)
+        navigate(`/shipment`)
     }
     return (
         // react e jekhon component er css shobjaygay use kore. jodi eta bondo korte cai taile module css file name use korte hove.
@@ -45,7 +45,7 @@ const Orders = () => {
                     <div className='btns'>
                         <button className='clear-cart-btn'>Clear Cart  <FontAwesomeIcon icon={faTrashCan} className='icon'></FontAwesomeIcon> </button>
                         <br />
-                        <button onClick={proceedCheckout} className='review-order-btn'>Review Order  <FontAwesomeIcon icon={faArrowRight} className="icon"></FontAwesomeIcon> </button>
+                        <button onClick={proceedCheckout} className='review-order-btn'>Proceed Shipping  <FontAwesomeIcon icon={faArrowRight} className="icon"></FontAwesomeIcon> </button>
                     </div>
                 </Cart>
             </div>
